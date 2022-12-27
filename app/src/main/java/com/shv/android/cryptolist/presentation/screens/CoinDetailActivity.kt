@@ -5,19 +5,21 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.shv.android.cryptolist.R
+import com.shv.android.cryptolist.databinding.ActivityCoinDetailBinding
 import com.shv.android.cryptolist.presentation.CoinViewModel
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_coin_detail.*
-
-private const val TAG = "CoinDetailActivity"
 
 class CoinDetailActivity : AppCompatActivity() {
-    private lateinit var viewModel: CoinViewModel
+
+    private val viewModel: CoinViewModel by lazy {
+        ViewModelProvider(this)[CoinViewModel::class.java]
+    }
+    private lateinit var binding: ActivityCoinDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_coin_detail)
+        binding = ActivityCoinDetailBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         if (!intent.hasExtra(EXTRA_FROM_SYMBOL)) {
             finish()
@@ -25,19 +27,19 @@ class CoinDetailActivity : AppCompatActivity() {
         }
         val fromSymbol = intent.getStringExtra(EXTRA_FROM_SYMBOL) ?: EMPTY_SYMBOL
 
-        viewModel = ViewModelProvider(this)[CoinViewModel::class.java]
-
         viewModel.getDetailInfo(fromSymbol).observe(this) {
-            tvPrice.text = it.price.toString()
-            tvMinDay.text = it.lowDay.toString()
-            tvMaxDay.text = it.highDay.toString()
-            tvLastDeal.text = it.lastMarket
-            tvUpdate.text = it.lastUpdate
+            with(binding) {
+                tvPrice.text = it.price.toString()
+                tvMinDay.text = it.lowDay.toString()
+                tvMaxDay.text = it.highDay.toString()
+                tvLastDeal.text = it.lastMarket
+                tvUpdate.text = it.lastUpdate
 
-            textViewSymbolDetail.text = it.fromSymbol
-            textViewCurrency.text = it.toSymbol
+                textViewSymbolDetail.text = it.fromSymbol
+                textViewCurrency.text = it.toSymbol
 
-            Picasso.get().load(it.imageUrl).into(imageViewLogoCoinDetail)
+                Picasso.get().load(it.imageUrl).into(imageViewLogoCoinDetail)
+            }
         }
     }
 
