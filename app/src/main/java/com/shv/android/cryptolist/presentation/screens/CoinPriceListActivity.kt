@@ -31,9 +31,10 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.recyclerViewCoinPriceList.adapter = adapter
+        binding.recyclerViewCoinPriceList.itemAnimator = null
 
         viewModel.coinInfoList.observe(this) {
-            adapter.coinInfoList = it
+            adapter.submitList(it)
         }
     }
 }
