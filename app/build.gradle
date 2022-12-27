@@ -61,7 +61,7 @@ dependencies {
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
     // Annotation processor
-    kapt "androidx.lifecycle:lifecycle-compiler:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.5.1"
     // optional - ReactiveStreams support for LiveData
     implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:2.5.1"
 
@@ -73,5 +73,5 @@ dependencies {
     // optional - Paging 3 Integration
     implementation "androidx.room:room-paging:2.4.3"
 
-    implementation 'com.squareup.picasso:picasso:2.8'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }

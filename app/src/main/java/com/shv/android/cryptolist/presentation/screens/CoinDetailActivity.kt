@@ -1,4 +1,4 @@
-package com.shv.android.cryptolist
+package com.shv.android.cryptolist.presentation.screens
 
 import android.content.Context
 import android.content.Intent
@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.shv.android.cryptolist.R
+import com.shv.android.cryptolist.presentation.CoinViewModel
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_coin_detail.*
 import kotlinx.android.synthetic.main.activity_coin_detail.view.*

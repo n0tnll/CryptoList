@@ -1,11 +1,13 @@
-package com.shv.android.cryptolist
+package com.shv.android.cryptolist.presentation.screens
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.shv.android.cryptolist.adapters.CoinInfoAdapter
-import com.shv.android.cryptolist.pojo.CoinPriceInfo
+import com.shv.android.cryptolist.R
+import com.shv.android.cryptolist.presentation.adapters.CoinInfoAdapter
+import com.shv.android.cryptolist.data.model.CoinPriceInfo
+import com.shv.android.cryptolist.presentation.CoinViewModel
 import kotlinx.android.synthetic.main.activity_coint_price_list.*
 
 private const val TAG = "MainActivityV"

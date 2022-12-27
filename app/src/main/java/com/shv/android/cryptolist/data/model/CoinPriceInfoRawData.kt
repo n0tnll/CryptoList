@@ -1,4 +1,4 @@
-package com.shv.android.cryptolist.pojo
+package com.shv.android.cryptolist.data.model
 
 import com.google.gson.JsonObject
 import com.google.gson.annotations.Expose

@@ -1,4 +1,4 @@
-package com.shv.android.cryptolist.adapters
+package com.shv.android.cryptolist.presentation.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.shv.android.cryptolist.R
-import com.shv.android.cryptolist.pojo.CoinPriceInfo
+import com.shv.android.cryptolist.data.model.CoinPriceInfo
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_coin_info.view.*
 

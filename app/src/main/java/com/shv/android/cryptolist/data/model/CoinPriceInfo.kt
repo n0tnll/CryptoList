@@ -1,13 +1,12 @@
-package com.shv.android.cryptolist.pojo
+package com.shv.android.cryptolist.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 
 import com.google.gson.annotations.SerializedName
-import com.shv.android.cryptolist.api.ApiFactory.BASE_IMAGE_URL
+import com.shv.android.cryptolist.data.network.ApiFactory.BASE_IMAGE_URL
 import com.shv.android.cryptolist.utils.convertTimestampToTime
-import io.reactivex.rxjava3.annotations.NonNull
 
 @Entity(tableName = "full_price_list")
 data class CoinPriceInfo(

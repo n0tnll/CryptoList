@@ -1,4 +1,4 @@
-package com.shv.android.cryptolist.api
+package com.shv.android.cryptolist.data.network
 
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory

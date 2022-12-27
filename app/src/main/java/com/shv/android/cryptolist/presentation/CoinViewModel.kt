@@ -1,15 +1,14 @@
-package com.shv.android.cryptolist
+package com.shv.android.cryptolist.presentation
 
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import com.google.gson.Gson
-import com.shv.android.cryptolist.api.ApiFactory
-import com.shv.android.cryptolist.database.AppDatabase
-import com.shv.android.cryptolist.pojo.CoinPriceInfo
-import com.shv.android.cryptolist.pojo.CoinPriceInfoRawData
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import com.shv.android.cryptolist.data.network.ApiFactory
+import com.shv.android.cryptolist.data.database.AppDatabase
+import com.shv.android.cryptolist.data.model.CoinPriceInfo
+import com.shv.android.cryptolist.data.model.CoinPriceInfoRawData
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
