@@ -1,4 +1,4 @@
-package com.shv.android.cryptolist.data.model
+package com.shv.android.cryptolist.data.network.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -9,7 +9,7 @@ import com.shv.android.cryptolist.data.network.ApiFactory.BASE_IMAGE_URL
 import com.shv.android.cryptolist.utils.convertTimestampToTime
 
 @Entity(tableName = "full_price_list")
-data class CoinPriceInfo(
+data class CoinInfoDto(
     @SerializedName("TYPE")
     @Expose
     val type: String? = null,

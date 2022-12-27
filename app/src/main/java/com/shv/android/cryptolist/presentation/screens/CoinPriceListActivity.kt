@@ -6,7 +6,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.shv.android.cryptolist.R
 import com.shv.android.cryptolist.presentation.adapters.CoinInfoAdapter
-import com.shv.android.cryptolist.data.model.CoinPriceInfo
+import com.shv.android.cryptolist.data.network.model.CoinInfoDto
 import com.shv.android.cryptolist.presentation.CoinViewModel
 import kotlinx.android.synthetic.main.activity_coint_price_list.*
 
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = CoinInfoAdapter(this)
         adapter.onCoinClickListener = object : CoinInfoAdapter.OnCoinClickListener {
-            override fun onCoinClick(coinPriceInfo: CoinPriceInfo) {
+            override fun onCoinClick(coinPriceInfo: CoinInfoDto) {
                 val intent = CoinDetailActivity.newIntent(this@MainActivity, coinPriceInfo.fromSymbol)
                 startActivity(intent)
             }
