@@ -1,8 +1,7 @@
 package com.shv.android.cryptolist.data.network
 
-import com.shv.android.cryptolist.data.network.model.CoinNamesListDto
 import com.shv.android.cryptolist.data.network.model.CoinInfoJsonContainerDto
-import io.reactivex.rxjava3.core.Single
+import com.shv.android.cryptolist.data.network.model.CoinNamesListDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 
